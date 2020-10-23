@@ -1,0 +1,46 @@
+name: Configure GitHub labels
+
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - .github/labels.toml
+  push:
+    branches:
+      - master
+    paths:
+      - .github/labels.toml
+  label:
+    types:
+      - created
+      - edited
+      - deleted
+  workflow_dispatch:
+
+jobs:
+  configure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install Python dependencies
+        run: pip install labels
+
+      - name: Sync labels
+        run: labels --verbose sync -f .github/labels.toml
+        env:
+          LABELS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LABELS_USERNAME: ${{ github.repository_owner }}
+
+      - name: Commit definition file after fetch
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Sync definition file with existing labels"
+          file_pattern: .github/labels.toml
