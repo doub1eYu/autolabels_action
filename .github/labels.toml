@@ -50,5 +50,5 @@ description = "duplicate"
 
 ["test"]
 color = "cccccc"
-name = "重複"
+name = "test"
 description = "duplicate"
