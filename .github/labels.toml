@@ -47,3 +47,8 @@ description = "question"
 color = "cccccc"
 name = "重複"
 description = "duplicate"
+
+["test"]
+color = "cccccc"
+name = "重複"
+description = "duplicate"
