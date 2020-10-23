@@ -1,3 +1,8 @@
+[test]
+color = "cccccc"
+name = "test"
+description = "duplicate"
+
 ["不具合"]
 color = "ee0701"
 name = "不具合"
@@ -46,9 +51,4 @@ description = "question"
 ["重複"]
 color = "cccccc"
 name = "重複"
-description = "duplicate"
-
-["test"]
-color = "cccccc"
-name = "test"
 description = "duplicate"
