@@ -11,11 +11,6 @@ on:
       - master
     paths:
       - .github/labels.toml
-  label:
-    types:
-      - created
-      - edited
-      - deleted
   workflow_dispatch:
 
 jobs:
