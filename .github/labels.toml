@@ -1,0 +1,39 @@
+[bug]
+color = "ee0701"
+name = "bug"
+description = "bug"
+
+[duplicate]
+color = "cccccc"
+name = "duplicate"
+description = "duplicate"
+
+[enhancement]
+color = "fbca04"
+name = "enhancement"
+description = "enhancement"
+
+["help wanted"]
+color = "33aa3f"
+name = "help wanted"
+description = "help wanted"
+
+[invalid]
+color = "e6e6e6"
+name = "invalid"
+description = "invalid"
+
+[question]
+color = "cc317c"
+name = "question"
+description = "question"
+
+[test111]
+color = "c2e0c6"
+name = "test111"
+description = ""
+
+[wontfix]
+color = "ffffff"
+name = "wontfix"
+description = "wontfix"
