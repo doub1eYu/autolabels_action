@@ -29,12 +29,6 @@ jobs:
         run: pip install labels toml
       
       - name: Fetch labels
-        run: labels fetch -f .github/labels.toml
-        env:
-          LABELS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LABELS_USERNAME: ${{ github.repository_owner }}
-
-      - name: Modify labels.toml
         run: python .github/fetch_labels.py
         env:
           LABELS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
