@@ -3,8 +3,8 @@
 
 import toml
 
-dict_toml = toml.load(open('labels.toml'))
-dict_toml_f = toml.load(open('labels_first_time.toml'))
+dict_toml = toml.load(open('.github/labels.toml'))
+dict_toml_f = toml.load(open('.github/labels_first_time.toml'))
 
 for k in dict_toml:
     if k in dict_toml_f:
