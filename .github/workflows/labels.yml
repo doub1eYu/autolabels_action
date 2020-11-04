@@ -27,9 +27,9 @@ jobs:
 
       - name: Install Python dependencies
         run: pip install labels
-
-      - name: Diff labels
-        run: labels sync --dryrun -f .github/labels.toml
+      
+      - name: Fetch labels
+        run: labels fetch -f .github/labels.toml
         env:
           LABELS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LABELS_USERNAME: ${{ github.repository_owner }}
@@ -45,20 +45,3 @@ jobs:
         with:
           commit_message: "Sync definition file with existing labels"
           file_pattern: .github/labels.toml
-
-      - name: Fetch labels
-        run: labels fetch -f .github/labels.toml
-        env:
-          LABELS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LABELS_USERNAME: ${{ github.repository_owner }}
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Fetch definition file from existing labels"
-          title: "Sync definition file with existing labels"
-          body: |
-            Current definition file and existing labels don't match.
-          branch: sync-labels
-          branch-suffix: ""
