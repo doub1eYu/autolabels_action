@@ -7,6 +7,7 @@ import subprocess
 
 try:
     dict_toml_f = toml.load(open('.github/labels_first_time.toml'))
+    dict_toml_c = toml.load(open('.github/labels_custom.toml'))
 except Exception:
     sys.exit()
 
@@ -16,7 +17,12 @@ print(runcmd)
 dict_toml = toml.load(open('.github/labels.toml'))
 
 for k in dict_toml_f:
-    dict_toml[k] = dict_toml_f[k]
+    if k in dict_toml:
+        dict_toml[k] = dict_toml_f[k]
+
+for k in dict_toml_c:
+    dict_toml[k] = dict_toml_c[k]
+
 print(dict_toml)
 toml.dump(dict_toml, open('.github/labels.toml', mode='w'))
 

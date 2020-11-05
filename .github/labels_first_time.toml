@@ -1,0 +1,34 @@
+[bug]
+color = "ee0701"
+name = "不具合"
+description = "bug"
+
+[wontfix]
+color = "ffffff"
+name = "保留"
+description = "wontfix"
+
+[enhancement]
+color = "fbca04"
+name = "提案"
+description = "enhancement"
+
+[invalid]
+color = "e6e6e6"
+name = "無効"
+description = "invalid"
+
+[question]
+color = "cc317c"
+name = "質問"
+description = "question"
+
+[duplicate]
+color = "cccccc"
+name = "重複"
+description = "duplicate"
+
+["help wanted"]
+color = "33aa3f"
+name = "相談"
+description = "help wanted"
