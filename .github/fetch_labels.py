@@ -13,7 +13,7 @@ except Exception:
 
 cmd = "labels fetch -f .github/labels.toml"
 runcmd = subprocess.check_output(cmd.split())
-print(runcmd)
+
 dict_toml = toml.load(open('.github/labels.toml'))
 
 for k in dict_toml_f:
@@ -28,7 +28,9 @@ toml.dump(dict_toml, open('.github/labels.toml', mode='w'))
 
 cmd = "git rm .github/labels_first_time.toml"
 runcmd = subprocess.check_output(cmd.split())
-print(runcmd)
+
+cmd = "git rm .github/labels_custom.toml"
+runcmd = subprocess.check_output(cmd.split())
 
 
 
