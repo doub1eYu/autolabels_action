@@ -1,3 +1,8 @@
+[bug]
+color = "ee0701"
+name = "bug"
+description = "bug"
+
 ["modify by github"]
 color = "c2e0c6"
 name = "modify by github"
@@ -13,25 +18,10 @@ color = "fcae64"
 name = "test222"
 description = ""
 
-["不具合"]
-color = "ee0701"
-name = "不具合"
-description = "bug"
-
-["保留"]
+[wontfix]
 color = "ffffff"
-name = "保留"
+name = "wontfix"
 description = "wontfix"
-
-["提案"]
-color = "fbca04"
-name = "提案"
-description = "enhancement"
-
-["無効"]
-color = "e6e6e6"
-name = "無効"
-description = "invalid"
 
 ["相談"]
 color = "33aa3f"
