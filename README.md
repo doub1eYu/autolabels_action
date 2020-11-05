@@ -9,9 +9,9 @@ githubのラベル管理を自動化、かつ一元化するためのアクシ�
  |--workflows  
  |  |--labels.yml                → githubアクション定義ファイル
  |--fetch_labels.py              → バッチファイル  
- |--labels.toml                  → ラベル管理定義ファイル （初回の時、中身は関係ない）  
- |--labels_custom.toml           → 初期設定で追加したいラベルの定義ファイル （初回実行後は自動的に削除される）
- |--labels_first_time.toml       → 初期設定で変換したいgithubデフォルトラベルの定義ファイル （初回実行後は自動的に削除される）
+ |--labels.toml                  → ラベル管理定義ファイル（初回の時、中身は関係なし）  
+ |--labels_custom.toml           → 初期設定で追加したいラベルの定義ファイル（初回実行後は自動的に削除）
+ |--labels_first_time.toml       → 初期設定で変換したいgithubデフォルトラベルの定義ファイル（初回実行後は自動的に削除）
 </pre>   
 
 ## バッチ動き説明  
