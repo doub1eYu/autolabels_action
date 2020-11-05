@@ -1,9 +1,21 @@
-# testaction
+# githubラベル自動化
+githubのラベル管理を自動化、かつ一元化するためのアクション。
+## 初回実行  
+1. labels_custom.tomlに追加したいラベル情報を記入。  
+2. labels_custom.tomlとlabels_first_time.tomlを.githubの下に格納。  
+3. フォルダ構成は下記のようになった上、マスタブランチにプッシュする。  
+<pre>
+.github  
+ |--workflows  
+ |  |--labels.yml                → githubアクション定義ファイル
+ |--fetch_labels.py              → バッチファイル  
+ |--labels.toml                  → ラベル管理定義ファイル （初回の時、中身は関係ないので、気にしなくて大丈夫）  
+ |--labels_custom.toml           → 初期設定に追加したいラベルの定義ファイル （初回実行後は自動的に削除される）
+ |--labels_first_time.toml       → 初期設定に変換したいgithubデフォルトラベルの定義ファイル （初回実行後は自動的に削除される）
+</pre>   
 
-現行ラベルと初回定義ファイル.github/labels_first_time.tomlをマージし、labels.tomlを修正
-　・初回定義ファイルに存在するラベルは日本語ラベルの切替
-　・初回定義ファイルに存在しないラベルはそのまま残し
-　・初回定義ファイルを削除
- 
-※実行すると、ラベル情報を定義するlabels.tomlファイルは一緒に更新されるため、初回中身をメモ。
-
+## バッチ動き説明  
+* 初回実行の場合、githubデフォルトラベルを日本語に変換し、デフォルトラベル以外のラベルは変更なし。
+* 初回以降の場合、
+  * githubアクション定義ファイル「labels.yml」を編集することより、ラベルを更新。
+  * コンソル画面でラベルを修正、「labels.yml」も自動で更新される。
