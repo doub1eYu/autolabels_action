@@ -3,7 +3,7 @@ githubのラベル管理を自動化、かつ一元化するためのアクシ�
 ## 初回実行  
 1. labels_custom.tomlに追加したいラベル情報を記入。  
 2. labels_custom.tomlとlabels_first_time.tomlを.githubの下に格納。  
-3. フォルダ構成は下記のようになった上、マスタブランチにプッシュする。  
+3. フォルダ構成は下記のようになった上、.githubフォルダをマスタブランチにプッシュする。  
 <pre>
 .github  
  |--workflows  
